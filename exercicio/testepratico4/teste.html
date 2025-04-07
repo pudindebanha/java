@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste Prático</title>
+    <title>Tabuada</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,11 +13,13 @@
 
     <section>
         <div>
-            <p>Número:<input type="number" name="tabuada" id="tabuada"> <input type="button" value="Gerar tabuada"></p>
+            <p>Número: <input type="num" name="tabuada" id="tab">   <input type="button" value="Gerar tabuada" onclick="calcular()"></p>
 
         </div>
-        <div>
-            
+        <div id="res">
+            <select name="tabuada" id="seltab">
+                <option>Digite um número acima</option>
+            </select>
         </div>
     </section>
 
