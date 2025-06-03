@@ -9,3 +9,7 @@ cursos.map((el, i) => { // el = Valor e i = posição
 // Curso: PHP na posição: 3
 // Curso: React na posição: 4
 
+const converterInt=(e) => parseInt(e)
+const dobrar=(e) => e*2
+let num = ['1', '2', '3', '4', '5'].map(dobrar)
+console.log(num)
