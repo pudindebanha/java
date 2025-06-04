@@ -10,3 +10,5 @@ el.map((e,i)=>{ //Utilizando o .map para percorrer o el e utilizando o parametro
 // const el = document.getElementsByTagName("div")
 // const val = Array.prototype.map.call(el, ({innerHTML}) => innerHTML)
 // console.log(val)
+
+
