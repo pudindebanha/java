@@ -19,3 +19,8 @@ c2.addEventListener("click", (evt)=>{
 // }
 
 
+const botao = document.querySelector("button");
+
+botao.addEventListener("click", () => {
+  alert("Você clicou no botão!");
+});
