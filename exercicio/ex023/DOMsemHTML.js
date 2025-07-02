@@ -1,6 +1,6 @@
 const caixa1 = document.getElementById("caixa1")
 const btn_c1 = document.querySelectorAll(".c1")
-const cursos = ['HTML', 'CSS', 'JS', 'MYSQL', 'REACT']
+const cursos = ['HTML', 'CSS', 'JS', 'MYSQL', 'REACT', 'CSS2']
 
 cursos.map((el,chave)=>{
     const tot = chave + 1
