@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            border: none;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        button{
+            width: 220px;
+            height: 40px;
+            background-color: #025;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 10px;
+            font-size: 16px;
+        }
+        #btn_g {
+            display: flex;
+            flex-direction: column;   
+        }
+        .cursoc1 {
+            display: flex;
+            justify-content: center;
+            width: 200px;
+            border-radius: 10px;
+            border: 4px solid gray;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .selecionado {
+            background-color: red !important;
+            counter-reset: #fcc !important;
+            border-color: red !important;
+        }
+        .cursoc1 {
+            background-color: #ccc;
+            color: #ff0101;
+            font-weight: bolder;
+        }
+        .caixa {
+            border: 4px solid black;
+            background-color: #eee;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 5px;
+            height: 500px;
+            width: 300px;
+        }
+        .comandos {
+            width: 30%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        input{
+            width: 220px;
+        
+        }
+
+    </style>
+</head>
+<body>
+
+        <main>
+            <div id="caixa1" class="caixa">
+
+            </div>
+
+            <div id="caixa2" class="caixa">
+                <p>Nome do Curso</p>
+                <input id="input1" class="caixaNovoCurso" type="text">
+                <button id="btn_add">Adicionar</button>
+                <button id="btn_remove">Remover Selecionado</button>
+                <button id="btn_select">Curso Selecionado</button>
+            </div>
+        </main>
+    
+    <script src="testepratico7.js"></script>
+</body>
+</html>
