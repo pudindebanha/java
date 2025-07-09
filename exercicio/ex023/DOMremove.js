@@ -1,5 +1,5 @@
-const caixa1 = document.getElementById("caixa1")
-const btn_c1 = document.querySelectorAll(".c1")
+const caixa1 = document.getElementById("caixa1")//Utiliza o ID do HTML e passa para o JS
+const btn_c1 = document.querySelectorAll(".c1")//Utiliza o ID do HTML e passa para o JS
 const cursos = ['HTML', 'CSS', 'JS', 'MYSQL', 'REACT',]//Cria um array com os valores
 
 cursos.map((el,chave)=>{
@@ -13,3 +13,4 @@ cursos.map((el,chave)=>{
         caixa1.removeChild(evt.target) //Deve adioconar o remove child no pai do elemento que vai ser removido
     })
 })
+
