@@ -22,15 +22,35 @@ cursos.map((el,chave)=>{
     caixa1.appendChild(novoElemento)
 })
 
-btn_select.addEventListener("click", (evt)=>{
+const radioSelecionado=()=>{
     const todosRadios = [...document.querySelectorAll("input[type=radio]")]
-    let radioSelecionado = todosRadios.filter((ele,ind,arr)=>{
+    const radioSelecionado = todosRadios.filter((ele,ind,arr)=>{
         return ele.checked
     })
-    radioSelecionado=radioSelecionado[0]
-    const cursoSelecionado = radioSelecionado.parentNode.previousSibling.textContent
-    alert("Você selecionou o curso: " + cursoSelecionado)
+    return radioSelecionado[0]
+}
 
+
+btn_select.addEventListener("click", (evt)=>{
+    const rs = radioSelecionado()
+    if(rs != undefined){
+      const cursoSelecionado = rs.parentNode.previousSibling.textContent
+    alert("Você selecionou o curso: " + cursoSelecionado)  
+    } else {
+        alert("Selecione um curso")
+    }  
+})
+
+
+btn_remove.addEventListener("click", (evt)=>{
+    const rs = radioSelecionado()
+    try{
+    const cursoSelecionado = rs.parentNode.parentNode
+    cursoSelecionado.remove()    
+    } catch {
+        alert("Selecione um curso")
+    }
+    
 })
 
 
