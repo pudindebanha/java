@@ -1,14 +1,18 @@
 const caixa = document.getElementsByClassName("caixa")
 const cursos = ["HTML", "CSS", "JS", "C++", "SQL", "REACT"]
-const btn_add = document.getElementById("btn_add")
+const btn_antes = document.getElementById("btn_antes")
+const btn_depois = document.getElementById("btn_depois")
 const btn_remove = document.getElementById("btn_remove")
 const btn_select = document.getElementById("btn_select")
+const nomeCurso = document.getElementById("input1")
 
-cursos.map((el,chave)=>{
+let indice = 0
+
+const criarNovoCurso=(curso)=>{
     const novoElemento = document.createElement("div")
-    novoElemento.setAttribute("id", "c"+chave)
+    novoElemento.setAttribute("id", "c"+indice)
     novoElemento.setAttribute("class", "cursoc1")
-    novoElemento.innerHTML = el
+    novoElemento.innerHTML = curso
     
     const comandos = document.createElement("div")
     comandos.setAttribute("class", "comandos")
@@ -19,7 +23,15 @@ cursos.map((el,chave)=>{
 
     comandos.appendChild(rb)
     novoElemento.appendChild(comandos)
+
+    return  novoElemento
+}
+
+
+cursos.map((el,chave)=>{
+    const novoElemento = criarNovoCurso(el)
     caixa1.appendChild(novoElemento)
+    indice++
 })
 
 const radioSelecionado=()=>{
@@ -51,6 +63,28 @@ btn_remove.addEventListener("click", (evt)=>{
         alert("Selecione um curso")
     }
     
+})
+
+btn_antes.addEventListener("click", (evt)=>{
+    const rs = radioSelecionado()
+    try{
+        const cursoSelecionado=rs.parentNode.parentNode
+        const novoCurso = criarNovoCurso(nomeCurso.value)
+        caixa1.insertBefore(novoCurso, cursoSelecionado)
+    } catch {
+        alert("Adicione um curso")
+    }
+})
+
+btn_depois.addEventListener("click", (evt)=>{
+    const rs = radioSelecionado()
+    try{
+        const cursoSelecionado = rs.parentNode.parentNode
+        const novoCurso = criarNovoCurso(nomeCurso.value)
+        caixa1.insertBefore(novoCurso, cursoSelecionado.nextSibling)
+    } catch {
+        alert("Adicione um curso")
+    } 
 })
 
 
