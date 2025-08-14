@@ -2,12 +2,12 @@ const p_array = document.getElementById("array")
 const btn_verificar = document.getElementById("btn_verificar")
 const resultado = document.getElementById("resultado")
 
-const elementos_array = [19,126,22,24,25,26,31]
+const elementos_array = [11,12,2,24,10,16,15]
 p_array.innerHTML = elementos_array
 
 btn_verificar.addEventListener("click", (evt)=>{
     resultado.innerHTML = 'Não conforme'
-    const ret = elementos_array.every((e,i)=>{
+    const ret = elementos_array.some((e,i)=>{
         if(e >= 18){
             resultado.innerHTML = "Array não conforme na posição "+i
         }
