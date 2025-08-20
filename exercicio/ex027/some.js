@@ -1,6 +1,6 @@
 const p_array = document.getElementById("array")
 const btn_verificar = document.getElementById("btn_verificar")
-const resultado = document.getElementById("resultado")
+const resultadoo = document.getElementById("resultado")
 
 const elementos_array = [11,12,2,24,10,16,15]
 p_array.innerHTML = elementos_array
