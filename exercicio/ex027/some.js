@@ -17,3 +17,10 @@ btn_verificar.addEventListener("click", (evt)=>{
         resultado.innerHTML = 'OK'
     }
 })
+
+
+
+// Cria um array de numeros
+
+
+array.reduce(callback(acumulador, elemento, índice, array), valorInicial)
