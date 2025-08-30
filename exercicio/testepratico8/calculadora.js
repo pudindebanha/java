@@ -1,3 +1,5 @@
+//Teste com chatgpt
+
 const res = document.getElementById("resultado")
 const btn_soma = document.getElementById("btn_soma")
 const btn_sub = document.getElementById("btn_sub")
